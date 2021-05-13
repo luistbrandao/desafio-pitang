@@ -1,0 +1,59 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<ui:composition template="">
+	<ui:define name="Cadastro">
+		<h1 class="title ui-widget-header ui-corner-all">
+			<h:outputText value="Cadastro de clientes" />
+		</h1>
+	</ui:define>
+	<ui:define name="conteudo">
+		<h:form id="cadastroEdit">
+
+			<p:panel id="cadastroclientes" header="Cadastro" style="margin-top: 1%;">
+
+				
+				<form id="formCadastro">
+					<div class="form-group mt-5">
+						<label>Nome</label>
+						<input type="text" value="#{usuario.nome}">		
+					</div>
+					
+					<div class="form-group">
+						<label>Email</label>
+						<input type="email" value="#{usuario.email}">
+					</div>
+					
+					<div class="form-group">
+						<label>Senha</label>
+						<input type="password" value="#{usuario.senha}">		
+					</div>
+					
+					<div class="form-group">
+						<label>DDD</label>
+						<input value="#{usuario.telefone.ddd}">		
+					</div>
+					
+					<div class="form-group">
+						<label>Telefone</label>
+						<input  value="#{usuario.telefone.numero}">		
+					</div>
+					 
+					<div class="formCenterButtonWrap">
+						<p:commandButton id="bttnConfirmar"
+							style="margin-top: 3%; margin-bottom: 1%;"
+							value="#{bean.cadastrar}"
+							/>
+				</form>
+			</div>
+
+						
+						
+				</p:panel>
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

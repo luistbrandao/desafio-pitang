@@ -1,0 +1,55 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<ui:composition template="">
+	<ui:define name="Cadastro">
+		<h1 class="title ui-widget-header ui-corner-all">
+			<h:outputText value="Login de clientes" />
+		</h1>
+	</ui:define>
+	<ui:define name="conteudoLogin">
+		<h:form id="login">
+
+			<p:panel id="login" header="Login" style="margin-top: 1%;">
+	<div class="container">
+		<div class="style="margin-top: 1%;">
+				
+			<div class="col-5">
+				
+				<form id="formLogin">
+					<div class="form-group">
+						<label>Email</label>
+						<input required="required" value="#{usuario.email}">
+					</div>
+					<div class="form-group mb-1">
+						<label>Senha</label>
+						<input required="required" name="#{usuario.senha}">
+						
+						<div class="formCenterButtonWrap">
+							<p:commandButton id="bttnCadastrar"
+								style="margin-top: 3%; margin-bottom: 1%;"
+								value="Cadastrar novo usuário"
+							/>		
+					</div>
+					 
+					<div class="formCenterButtonWrap">
+						<p:commandButton id="bttnEntrar"
+							style="margin-top: 3%; margin-bottom: 1%;"
+							value="#{bean.login}"
+							/>
+							</div>
+				</form>
+			</div>
+			
+		</div>
+	</div>
+	
+	</ui:composition>
+	</h:form>
+	</ui:define>
+	</p:panel>
+</body>
+</html>
